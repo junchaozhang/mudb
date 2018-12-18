@@ -59,6 +59,14 @@ export function randFloat64 () {
 
 // random array
 
+export function randArray () {
+    const a = new Array(Math.floor(Math.random() * 10));
+    for (let i = 0; i < a.length; ++i) {
+        a[i] = randFloat32();
+    }
+    return a;
+}
+
 export function randVec (dimension:number) {
     const v = new Float32Array(dimension);
     for (let i = 0; i < v.length; ++i) {
