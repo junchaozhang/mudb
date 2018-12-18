@@ -56,3 +56,13 @@ export function randFloat64 () {
     dv.setUint32(4, randUint32(), true);
     return dv.getFloat64(0, true);
 }
+
+// random array
+
+export function randVec (dimension:number) {
+    const v = new Float32Array(dimension);
+    for (let i = 0; i < v.length; ++i) {
+        v[i] = randFloat32();
+    }
+    return v;
+}
